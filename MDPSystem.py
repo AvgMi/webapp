@@ -8,7 +8,7 @@ Created on Thu Sep 22 18:06:57 2022
 import streamlit as st
 import pickle
 
-loading = pickle.load(open("C:/Users/pushp/Desktop/MDPSystem/Diabetes_pred.sav","rb"))
+diab_model = pickle.load(open("C:/Users/pushp/Desktop/MDPSystem/Diabetes_pred.sav","rb"))
 heart_model = pickle.load(open("C:/Users/pushp/Desktop/MDPSystem/Heart_pred.sav","rb"))
 par_model = pickle.load(open("C:/Users/pushp/Desktop/MDPSystem/Parkinsons_pred.sav","rb"))
 
@@ -38,7 +38,7 @@ if (menu == "Diabetes Prediction" ):
     # creating a button for Prediction
     
     if st.button('Diabetes Test'):
-        Diabetes_prediction = loading.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
+        Diabetes_prediction = diab_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
         
         if (Diabetes_prediction[0] == 1):
            Diagnosis = 'The person is diabetic'
