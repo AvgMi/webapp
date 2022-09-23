@@ -21,7 +21,7 @@ st.image("multiimage.png")
 menu = st.sidebar.selectbox("Multiple Disease Prediction System", ["Diabetes Prediction","Heart Disease Prediction","Parkinsons Prediction","BMI Calculator"])
 if (menu == "Diabetes Prediction" ):
     # page title
-    st.write(test"Diabetes Prediction")
+    st.write("Diabetes Prediction")
 
     Pregnancies = st.selectbox("Pregnancies(no of Times)", sorted([ 6,  1,  8,  0,  5,  3, 10,  2,  4,  7,  9, 11, 13, 15, 17, 12, 14]))
     Glucose = st.number_input("Glucose")
