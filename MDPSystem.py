@@ -8,14 +8,14 @@ Created on Thu Sep 22 18:06:57 2022
 import streamlit as st
 import pickle
 
-diab_model = pickle.load(open("C:/Users/pushp/Desktop/MDPSystem/Diabetes_pred.sav","rb"))
-heart_model = pickle.load(open("C:/Users/pushp/Desktop/MDPSystem/Heart_pred.sav","rb"))
-par_model = pickle.load(open("C:/Users/pushp/Desktop/MDPSystem/Parkinsons_pred.sav","rb"))
+diab_model = pickle.load(open("Diabetes_pred.sav","rb"))
+heart_model = pickle.load(open("Heart_pred.sav","rb"))
+par_model = pickle.load(open("Parkinsons_pred.sav","rb"))
 
 
 st.title("Multiple Disease Prediction System")
 
-st.image("C:/Users/pushp/Desktop/MDPSystem/multiimage.png")
+st.image("multiimage.png")
 
 
 menu = st.sidebar.selectbox("Multiple Disease Prediction System", ["Diabetes Prediction","Heart Disease Prediction","Parkinsons Prediction","BMI Calculator"])
@@ -23,7 +23,7 @@ if (menu == "Diabetes Prediction" ):
     # page title
     st.title("Diabetes Prediction")
 
-    Pregnancies = st.selectbox("Pregnancies(Weeks)", sorted([ 6,  1,  8,  0,  5,  3, 10,  2,  4,  7,  9, 11, 13, 15, 17, 12, 14]))
+    Pregnancies = st.selectbox("Pregnancies(no of Times)", sorted([ 6,  1,  8,  0,  5,  3, 10,  2,  4,  7,  9, 11, 13, 15, 17, 12, 14]))
     Glucose = st.number_input("Glucose")
     BloodPressure = st.number_input("BloodPressure")
     SkinThickness = st.number_input("SkinThickness")
