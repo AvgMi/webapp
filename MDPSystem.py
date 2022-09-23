@@ -21,7 +21,7 @@ st.image("multiimage.png")
 menu = st.sidebar.selectbox("Multiple Disease Prediction System", ["Diabetes Prediction","Heart Disease Prediction","Parkinsons Prediction","BMI Calculator"])
 if (menu == "Diabetes Prediction" ):
     # page title
-    st.title("Diabetes Prediction")
+    st.write(test"Diabetes Prediction")
 
     Pregnancies = st.selectbox("Pregnancies(no of Times)", sorted([ 6,  1,  8,  0,  5,  3, 10,  2,  4,  7,  9, 11, 13, 15, 17, 12, 14]))
     Glucose = st.number_input("Glucose")
@@ -207,7 +207,7 @@ elif rad == "About us":
         st.write("""Diabetes Dataset - https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database """)
         st.write("Heart Disease Dataset - https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset ")
         st.write(' Parkinsons Data Set - https://www.kaggle.com/datasets/nidaguler/parkinsons-data-set')
-        st.write("For read and download code plz visite my github link \n https://github.com/LalitMahale/Multiple-Disease-Prediction-System.git")
+        st.write("For read and download code plz visite my github link \n https://github.com/AvgMi/webapp")
         
     else:
         st.write("""Hi, we Akshay & Aishwarya, have done our Post Graduate Diploma in Big Data Analytics from CDAC (act's) Chennai """)
