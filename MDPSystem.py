@@ -93,7 +93,7 @@ if (menu == "Heart Disease Prediction"):
     if st.button('Heart Disease Test Result'):
         heart_prediction = heart_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,ca,thal]])                          
         
-        if (heart_prediction[0] == 0):
+        if (heart_prediction[0] == 1):
           heart_diagnosis = 'The person is having heart disease'
         else:
           heart_diagnosis = 'The person does not have any heart disease'
